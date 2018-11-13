@@ -12,7 +12,13 @@ Cervone, A., Stepanov, E.A., & Riccardi, G. (2018). Coherence Models for Dialogu
 
 ## Data preprocessing
 
-The data used in the experiments (i.e. only the grid files, since source corpora are under licences) is available in the `data` folder. Furthermore, the scripts we used to generate the data from source corpora is available. See the README file in the `data/` folder for further details.
+The data used in the experiments (i.e. only the grid files, since source corpora are under licenses) is available in the `data` folder. Furthermore, the scripts we used to generate the data from source corpora is available. See the README file in the `data/` folder for further details.
+The corpora preprocessing step in the `corpus` folder is a modification of the scripts from [this library](https://github.com/ColingPaper2018/DialogueAct-Tagger).
+
+### Where do I find the source corpora used in the experiments?
+- BT Oasis is available [via email request](http://groups.inf.ed.ac.uk/oasis/)
+- Switchboard release 2 is available [under LDC license](https://catalog.ldc.upenn.edu/ldc97s62)
+- AMI is available for download from [this page](http://groups.inf.ed.ac.uk/ami/download/)
 
 ## Getting started
 
