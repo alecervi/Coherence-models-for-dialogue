@@ -555,7 +555,7 @@ class GridShuffler(object):
 def parse():
     parser = argparse.ArgumentParser(description='Shuffle generator')
     parser.add_argument('-gs', '--generate_shuffle', default='Oasis', help='Generate shuffle')
-    parser.add_argument('-m', '--grid_mode', default='egrid_-coref', help='Corpus name')
+    parser.add_argument('-m', '--grid_mode', default='egrid_-coref', help='Grid mode')
     parser.add_argument('-sn', '--shuffles_number', default=20, help='Number of shuffles')
     parser.add_argument('-rr', '--rewrite_new', default=True, help='Overwrite shuffle indexes')
     args = parser.parse_args()
