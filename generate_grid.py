@@ -18,7 +18,6 @@ import copy
 import timeit
 import re
 import logging
-import itertools
 import spacy
 import csv
 import os
@@ -61,6 +60,7 @@ corpora_paths = {'Switchboard': all_datasets_path + 'Switchboard/data/switchboar
                  'Maptask': all_datasets_path + 'maptaskv2-1',
                  'AMI': all_datasets_path + 'ami_public_manual_1.6.2'}
 
+
 def get_corpus(corpus_name):
     corpus_path = corpora_paths.get(corpus_name)
     if corpus_name=='Switchboard':
@@ -73,6 +73,7 @@ def get_corpus(corpus_name):
         corpus_loader = AMI(corpus_path)
     corpus_dct = corpus_loader.load_csv()
     return corpus_dct, corpus_loader
+
 
 class GridGenerator(object):
 
@@ -115,8 +116,6 @@ class GridGenerator(object):
         # Retrieve also syntactic role
 
         mentions = self.coref.get_mentions()
-        # print("Entities: ", entities)
-        # print("Mentions: ", mentions)
 
         most_representative = self.coref.get_most_representative()  # With coref
         # print("Most representative: ", most_representative)
@@ -204,7 +203,6 @@ class GridGenerator(object):
 
         return NPs_tokens
 
-
     def extract_all_nps(self, NPs_tokens=None, NEs=None):
         # Elser & Charniak (2008)
         # allNPs: (non-head mentions given role X), partial coref (only if identical)
@@ -218,7 +216,6 @@ class GridGenerator(object):
         NPs_tokens = NPs_tokens + NEs
 
         return NPs_tokens
-
 
     def extract_entities_from_utt(self, utt, entities_type="headNPs", use_coref=False,
                                   include_prons= False, exclude_conversation_prons= True):

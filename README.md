@@ -22,9 +22,17 @@ The corpora preprocessing step in the `corpus` folder is a modification of the s
 
 ## Getting started
 
+### Generate features vectors with the provided data
+
+### Data generation from the corpus
+
 Generate grids for training entity grid models using only entities (without coreference) for the corpus Oasis (provided you gave the correct path to the Oasis source files) in verbose mode:
 ```
 python generate_grid.py Oasis egrid_-coref egrid_-coref data/ -v
+```
+After having generated the original grids, generate shuffled grids (for the insertion task) for the same corpus:
+```
+python generate_shuffled.py -gs Oasis
 ```
 
 ## Coming soon
