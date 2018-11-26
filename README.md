@@ -24,6 +24,7 @@ The corpora preprocessing step in the `corpus` folder is a modification of the s
 - Switchboard release 2 is available [under LDC license](https://catalog.ldc.upenn.edu/ldc97s62)
 - AMI is available for download from [this page](http://groups.inf.ed.ac.uk/ami/download/)
 
+
 ## Getting started
 
 ### Generate features vectors with the provided data
@@ -55,3 +56,7 @@ After having generated the original grids, generate shuffled grids (for the reor
 ```
 python generate_shuffled.py -gs Oasis
 ```
+
+
+## Link to our experiments files
+You can get all our experiments files (obtained with the above procedure) [here](https://www.dropbox.com/s/1sewemx965o2jec/experiments.zip?dl=0)
