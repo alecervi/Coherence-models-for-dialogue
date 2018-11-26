@@ -9,8 +9,9 @@ Cervone, A., Stepanov, E.A., & Riccardi, G. (2018). Coherence Models for Dialogu
 - python 2.7+
 - spacy version 1
 - tqdm
+- mlxtend
 
-The code generates input feature vectors files for [SVM light](http://svmlight.joachims.org/), so in order to finally train the models you will need to install that as well.
+The code generates input feature vectors files for [SVM light](http://svmlight.joachims.org/) version 6.02, so in order to finally train the models you will need to install that as well.
 
 
 ## Data preprocessing
@@ -31,7 +32,18 @@ After having unzipped the file `data/data.zip` (the data used in our experiments
 ```
 python train_models.py -g Oasis
 ```
-You can find the generated feature vector files in the newly created path: `experiments/Oasis/reordering/egrid_-coref/`
+You can find the generated feature vector files in the newly created path `experiments/Oasis/reordering/egrid_-coref/` , divided according to the train/dev/test splits. Then, to train a model using SVM light you can run:
+```
+svm_learn -z p experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_train.dat my_model
+```
+To classify the test set using your newly trained model:
+```
+svm_classify experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat my_model my_prediction
+```
+Finally, to get the accuracy and other metrics reported in our paper for the newly trained model on the testset:
+```
+python eval_svmlight_output.py --testfile experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat --predfile my_prediction
+```
 
 ### Data generation from the corpus
 

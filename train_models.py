@@ -109,7 +109,8 @@ class EntitiesFeatureExtractor(object):
 
 
 
-    def extract_transitions_probs(self, corpus_dct=None,
+    def extract_transitions_probs(self,
+                                  corpus_dct=None,
                                   transition_range=(2, 2),
                                   saliency=1,
                                   logprobs=True,
