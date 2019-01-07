@@ -33,14 +33,24 @@ After having unzipped the file `data/data.zip` (the data used in our experiments
 ```
 python train_models.py -g Oasis
 ```
-You can find the generated feature vector files in the newly created path `experiments/Oasis/reordering/egrid_-coref/` , divided according to the train/dev/test splits. Then, to train a model using SVM light you can run:
+You can find the generated feature vector files in the newly created path `experiments/Oasis/reordering/egrid_-coref/` , divided according to the train/dev/test splits.
+
+### Train
+
+Then, to train a model using SVM light you can run:
 ```
 svm_learn -z p experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_train.dat my_model
 ```
+
+### Predict
+
 To classify the test set using your newly trained model:
 ```
 svm_classify experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat my_model my_prediction
 ```
+
+### Evaluate
+
 Finally, to get the accuracy and other metrics reported in our paper for the newly trained model on the testset:
 ```
 python eval_svmlight_output.py --testfile experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat --predfile my_prediction
