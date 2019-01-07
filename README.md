@@ -45,7 +45,10 @@ Finally, to get the accuracy and other metrics reported in our paper for the new
 ```
 python eval_svmlight_output.py --testfile experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat --predfile my_prediction
 ```
-
+If you don't specify the file with the model's predictions (```--predfile```), the script reports the performance of a random baseline on the testset using the same metrics:
+```
+python eval_svmlight_output.py --testfile experiments/Oasis/reordering/egrid_-coref/Oasis_sal1_range2_2_test.dat
+```
 ### Data generation from the corpus
 
 For generating grids for training entity grid models using only entities (without coreference) for the corpus Oasis (provided you gave the correct path to the Oasis source files) in verbose mode:
