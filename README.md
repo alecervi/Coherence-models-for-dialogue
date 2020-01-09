@@ -21,7 +21,7 @@ The corpora preprocessing step in the `corpus` folder is a modification of the s
 
 ### Where do I find the source corpora used in the experiments?
 - BT Oasis is available [via email request](http://groups.inf.ed.ac.uk/oasis/)
-- Switchboard release 2 is available [under LDC license](https://catalog.ldc.upenn.edu/ldc97s62)
+- The Switchboard Dialogue Act Corpus is available [here](https://web.stanford.edu/~jurafsky/swb1_dialogact_annot.tar.gz)
 - AMI is available for download from [this page](http://groups.inf.ed.ac.uk/ami/download/)
 
 
